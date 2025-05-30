@@ -1,6 +1,4 @@
-/* global module */
-/* eslint-env node */
-module.exports = {
+const tailwindConfig = {
   content: [
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
@@ -10,3 +8,5 @@ module.exports = {
   },
   plugins: [],
 }
+
+export default tailwindConfig;
