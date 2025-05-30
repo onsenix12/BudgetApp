@@ -1,3 +1,5 @@
+/* global module */
+/* eslint-env node */
 module.exports = {
   content: [
     "./index.html",

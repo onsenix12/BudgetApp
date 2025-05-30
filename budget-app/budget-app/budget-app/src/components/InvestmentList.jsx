@@ -54,8 +54,6 @@ function InvestmentList() {
   const totalProfitLoss = totalPortfolioValue - totalInvested;
   const totalProfitLossPercentage = totalInvested > 0 ? (totalProfitLoss / totalInvested * 100) : 0;
 
-  const investmentTypes = [...new Set(investments.map(inv => inv.type))];
-
   if (loading) {
     return (
       <div className="flex items-center justify-center py-12">
@@ -147,9 +145,6 @@ function InvestmentList() {
             <option value="all">All Investments</option>
             <option value="profit">Profitable Only</option>
             <option value="loss">Loss Only</option>
-            {investmentTypes.map(type => (
-              <option key={type} value={type}>{type}</option>
-            ))}
           </select>
         </div>
       </div>

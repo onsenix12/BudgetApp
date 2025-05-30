@@ -4,7 +4,7 @@ import { db } from '../firebase';
 import { collection, query, orderBy, onSnapshot, deleteDoc, doc, updateDoc } from 'firebase/firestore';
 import { TrendingUp, TrendingDown, Calendar, Tag, BarChart3, DollarSign, Hash, Pencil, Trash2, X, Check } from 'lucide-react';
 
-const investmentTypes = ["ETF", "Stock", "Cryptocurrency", "Bond", "Fixed Deposit", "Other"];
+// const investmentTypes = ["ETF", "Stock", "Cryptocurrency", "Bond", "Fixed Deposit", "Other"];
 
 function InvestmentList() {
   const [investments, setInvestments] = useState([]);
