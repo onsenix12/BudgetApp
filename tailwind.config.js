@@ -7,6 +7,6 @@ const tailwindConfig = {
     extend: {},
   },
   plugins: [],
-}
+};
 
 export default tailwindConfig;
