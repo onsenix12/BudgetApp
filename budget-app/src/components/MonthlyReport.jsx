@@ -96,7 +96,7 @@ function MonthlyReport() {
   const categoryPercentages = topCategories.map(([category, amount]) => ({
     category,
     amount,
-    percentage: totalMonthlyExpenses > 0 ? (amount / totalMonthlyExpenses * 100) : 0
+    percentage: totalMonthlyExpenses > 0 ? (amount / totalMonthlyExpenses * 100) : 0,
   }));
 
   if (loading) {

@@ -4,8 +4,6 @@ import { db } from '../firebase';
 import { collection, query, orderBy, onSnapshot, deleteDoc, doc, updateDoc } from 'firebase/firestore';
 import { TrendingUp, TrendingDown, Calendar, Tag, BarChart3, DollarSign, Hash, Pencil, Trash2, X, Check } from 'lucide-react';
 
-const investmentTypes = ["ETF", "Stock", "Cryptocurrency", "Bond", "Fixed Deposit", "Other"];
-
 function InvestmentList() {
   const [investments, setInvestments] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -111,8 +109,6 @@ function InvestmentList() {
   const totalProfitLoss = totalPortfolioValue - totalInvested;
   const totalProfitLossPercentage = totalInvested > 0 ? (totalProfitLoss / totalInvested * 100) : 0;
 
-  const investmentTypes = [...new Set(investments.map(inv => inv.type))];
-
   if (loading) {
     return (
       <div className="flex items-center justify-center py-12">
@@ -204,9 +200,6 @@ function InvestmentList() {
             <option value="all">All Investments</option>
             <option value="profit">Profitable Only</option>
             <option value="loss">Loss Only</option>
-            {investmentTypes.map(type => (
-              <option key={type} value={type}>{type}</option>
-            ))}
           </select>
         </div>
       </div>
@@ -255,7 +248,7 @@ function InvestmentList() {
                           onChange={(e) => setEditForm({...editForm, type: e.target.value})}
                           className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-transparent"
                         >
-                          {investmentTypes.map(type => (
+                          {["ETF", "Stock", "Cryptocurrency", "Bond", "Fixed Deposit", "Other"].map(type => (
                             <option key={type} value={type}>{type}</option>
                           ))}
                         </select>
