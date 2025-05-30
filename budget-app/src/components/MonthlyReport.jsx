@@ -209,7 +209,7 @@ function MonthlyReport() {
         <div className="bg-white p-6 rounded-xl border border-gray-100 shadow-sm">
           <h4 className="font-semibold text-gray-800 mb-4">Top Expense Categories</h4>
           <div className="space-y-3">
-            {categoryPercentages.map(({ category, amount, percentage }, index) => (
+            {categoryPercentages.map(({ category, amount, percentage }) => (
               <div key={category} className="space-y-2">
                 <div className="flex justify-between items-center text-sm">
                   <span className="font-medium text-gray-700">{category}</span>
