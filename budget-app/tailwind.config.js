@@ -1,4 +1,6 @@
-export default {
+/* global module */
+/* eslint-env node */
+module.exports = {
   content: [
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
