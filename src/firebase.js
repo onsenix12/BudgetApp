@@ -7,7 +7,7 @@ import { getFirestore } from "firebase/firestore";
 // Your web app's Firebase configuration
 // REPLACE THIS WITH YOUR ACTUAL CONFIGURATION FROM THE FIREBASE CONSOLE
 const firebaseConfig = {
-    apiKey: "AIzaSyDdSehFoTtO_ZyHmIfD2IrzHCFVxhjapcY",
+    apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
     authDomain: "budgetflow-wabmc.firebaseapp.com",
     projectId: "budgetflow-wabmc",
     storageBucket: "budgetflow-wabmc.firebasestorage.app",
